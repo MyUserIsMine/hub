@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "PlayCell.h"
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -26,10 +26,6 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-
-
-
 #pragma mark --
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -44,11 +40,8 @@
     return cell;
 }
 
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 300;
 }
-
-
 
 @end

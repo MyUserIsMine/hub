@@ -10,13 +10,13 @@
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
+
+
 @interface PlayerManager : NSObject
 
++ (instancetype)shareManager;
 
-+(instancetype)shareManager;
-
--(void)playVideoWithUrl:(NSString *)url attachView:(UIView*)view;
-
+- (void)playVideoWithUrl:(NSString *)url attachView:(UIView *)view frame:(CGRect)frame;
 
 @end
 

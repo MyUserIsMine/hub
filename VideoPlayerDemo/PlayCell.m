@@ -12,6 +12,8 @@
 @interface PlayCell()
 
 @property(nonatomic,copy)NSString *videoUrl;
+@property (weak, nonatomic) IBOutlet UIButton *playBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *backGroundImageView;
 
 @end
 
@@ -27,11 +29,12 @@
 
 - (IBAction)start:(id)sender {
 
+    _playBtn.hidden = YES;
+    _backGroundImageView.hidden = YES;
     
     NSString *url = @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
     
-    [[PlayerManager shareManager]playVideoWithUrl:url attachView:self.contentView];
-    
+    [[PlayerManager shareManager]playVideoWithUrl:url attachView:self.contentView frame:self.contentView.frame];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
