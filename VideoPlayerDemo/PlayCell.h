@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PlayCell.h
 //  VideoPlayerDemo
 //
 //  Created by MOYO on 2019/7/17.
@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-{
-    NSString *type;
-}
+NS_ASSUME_NONNULL_BEGIN
+@protocol startPlay <NSObject>
 
 
-@property (nonatomic,copy)NSString *name;
+
+@end
+@interface PlayCell : UITableViewCell
 
 @end
 
+NS_ASSUME_NONNULL_END
